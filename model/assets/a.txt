@@ -1,0 +1,11 @@
+df = pd.DataFrame()
+   df = data['chf', 'fst', 'pssi']
+   data_p = preprocess_data(data)
+   prediction = model.predict(data_p).tolist()
+   response={
+      'prediction':{
+         'fall' : prediction[1],
+         'walk' : prediction[0]
+      }
+   }
+   return jsonify(response)

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fall Detector</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: aqua;
+        }
+        h1 {
+            align-items: center;
+        }
+        form{ 
+           text-align: justify;
+        }
+        .ce {
+            display: block;
+            padding-bottom: 20px;
+            margin:0px;
+        }
+        label{
+            padding:10px;
+            
+        }
+        #fst{
+            margin-right:35px;        }
+        #pssi{
+            margin-right:85px;
+        }
+        input{
+            max-width: 200px;
+            min-width: 150px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fall Detection Using Neural Network</h1>
+    <div>
+        <form action="http://127.0.0.1:5000/predict" method="POST">
+            <div class="ce">
+            <label for="chf">Channel Frequency </label>
+            <input type="text" name="chf" id="chf">
+        </div>
+        <div class="ce">
+            <label for="fst" id="fst">First Seen time </label>
+            <input type="text" name="fst" id="fst">
+        </div>
+        <div class="ce">
+            <label for="pssi" id="pssi">Peak SSI</label>
+            <input type="text" name="pssi" id="pssi">
+        </div>
+            <button type="submit">Submit</button>
+            
+
+        </form>
+
+    
+    </div>
+   
+    
+</body>
+</html>
